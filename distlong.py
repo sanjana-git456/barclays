@@ -1,7 +1,7 @@
 x = input("Enter: ")
 def distinct(x):
     left = 0
-    right = 1
+    right = 0
     d = {}
     m = 0
     while right < len(x):
@@ -10,7 +10,9 @@ def distinct(x):
         else:
             d[x[right]] += 1
         while len(d) > 2:
-            del d[x[left]]
+            d[x[left]] -= 1
+            if d[x[left]] == 0:
+                del d[x[left]]
             left += 1
         m = max(m, right-left+1)
         right += 1
