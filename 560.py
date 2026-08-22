@@ -10,3 +10,19 @@ def long(x):
                 count += 1
     return count
 print(long(x))
+
+def optimal(x):
+    ps = 0
+    c = 0
+    d = {0:1}
+    for num in x:
+        ps += num
+        val = ps-k
+        if val in d:
+            c += d[val]
+        if ps in d:
+            d[ps] += 1
+        else:
+            d[ps] = 1
+    return c
+print(optimal(x))
