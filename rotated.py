@@ -7,12 +7,12 @@ def rotate(arr,k):
         mid = (left+right)//2
         if arr[mid] == k:
             return mid
-        if arr[left] <= arr[mid]:
+        if arr[left] <= arr[mid]: #if left side is sorted
             if arr[left] <= k <arr[mid]:
                 right = mid-1
             else:
                 left = mid+1
-        else:
+        else: #else right side is sorted
             if arr[mid] < k <= arr[right]:
                 left = mid+1
             else:
