@@ -8,14 +8,14 @@ def rotate(arr,k):
         if arr[mid] == k:
             return mid
         if arr[left] <= arr[mid]: #if left side is sorted
-            if arr[left] <= k <arr[mid]:
+            if arr[left] <= k <arr[mid]: #k is in the sorted side so search in the left side
                 right = mid-1
-            else:
+            else: #k is not in the sorted side so search in the right side
                 left = mid+1
         else: #else right side is sorted
-            if arr[mid] < k <= arr[right]:
+            if arr[mid] < k <= arr[right]: #k is in the sorted side so search the right side
                 left = mid+1
-            else:
+            else: #k is not in the sorted region so search the left side
                 right = mid-1
     return -1
 print(rotate(x,t))
