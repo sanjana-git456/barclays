@@ -8,7 +8,7 @@ def long(x):
     longest = ""
     for i in range(len(x)):
         odd = expand(x,i,i) #when length is odd so single centre point
-        even = expand(x,i,i+1)
+        even = expand(x,i,i+1) #when length is even so 2 centre points
         if len(odd) > len(longest):
             longest = odd
         if len(even) > len(longest):
