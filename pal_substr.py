@@ -7,7 +7,7 @@ def expand(x,left,right):
 def long(x):
     longest = ""
     for i in range(len(x)):
-        odd = expand(x,i,i)
+        odd = expand(x,i,i) #when length is odd so single centre point
         even = expand(x,i,i+1)
         if len(odd) > len(longest):
             longest = odd
