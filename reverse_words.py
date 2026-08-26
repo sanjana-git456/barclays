@@ -7,6 +7,7 @@ print(' '.join(rev(x)))
 def manual(x):
     words = []
     word = ""
+    result = []
     i = 0
     while i < len(x):
         if x[i] != " ":
@@ -18,5 +19,7 @@ def manual(x):
         i += 1
     if word:
         words.append(word)
-    return words
+    for i in range(len(words)-1,-1,-1):
+        result.append(words[i])
+    return ' '.join(result)
 print(manual(x))
