@@ -15,9 +15,9 @@ def manual(x):
         else:
             if word: #space encountered - word is made - append to words
                 words.append(word)
-                word = ""
+                word = "" #reset words
         i += 1
-    if word:
+    if word: #last word does not have a space after it so put it in words separately
         words.append(word)
     for i in range(len(words)-1,-1,-1):
         result.append(words[i])
