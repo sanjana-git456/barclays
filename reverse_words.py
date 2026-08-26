@@ -13,7 +13,7 @@ def manual(x):
         if x[i] != " ":
             word += x[i]
         else:
-            if word:
+            if word: #space encountered - word is made - append to words
                 words.append(word)
                 word = ""
         i += 1
